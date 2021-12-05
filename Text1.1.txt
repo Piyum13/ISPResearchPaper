@@ -1,1 +1,2 @@
-Adding line to check difference in files
+Sample Tex file
+Adding this line to identify new line change is being displayed correctly

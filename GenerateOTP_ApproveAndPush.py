@@ -13,12 +13,13 @@ def generateOTP():
     return OTP
 var = generateOTP()
 print ("OTP",var)
-user=str(input('Enter the OTP:'))
+user=int(input('Enter the OTP:'))
 if var==user:
-    commitmessage=str(input('Enter commit message:'))
-    call('git add .', shell = True)
-    call('git commit -m "'+ commitmessage +'"', shell = True)
-    print('Change committed successfully!')
+    Approval=str(input('Is the Code Approved?:'))
+    if Approval=='Approved':
+     call('git push origin main', shell = True)
+     print('Change pushed successfully!')
+    if Approval!='Approved':
+     print('Changes are not approved. Please connect with Approver')
 else:
     print('Enter Correct OTP')
-    
